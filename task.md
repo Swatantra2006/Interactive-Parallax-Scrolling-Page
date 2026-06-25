@@ -1,0 +1,5 @@
+- [x] Create Implementation Plan
+- [x] Create `index.html` structure
+- [x] Implement `style.css` core logic and design
+- [x] Implement `script.js` parallax and interactions
+- [x] Verify functionality

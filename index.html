@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar Explorer | Interactive Parallax Journey</title>
+    <meta name="description" content="An immersive futuristic parallax scrolling experience.">
+    <!-- Google Fonts: Inter for reading, Outfit for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="custom-cursor"></div>
+    <div class="cursor-follower" id="custom-cursor-follower"></div>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <span>INITIALIZING...</span>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Ambient Dynamic Lighting -->
+    <div class="ambient-glow" id="ambient-glow"></div>
+
+    <!-- HERO SECTION (Parallax) -->
+    <section class="hero" id="hero">
+        <!-- Parallax Layers -->
+        <!-- Layer 1: Slowest (Stars) -->
+        <div class="parallax-layer layer-bg" data-speed="0.05"></div> 
+        
+        <!-- Layer 2: Slow (Distant Planets / Nebulas) -->
+        <div class="parallax-layer layer-planets" data-speed="0.15">
+            <div class="planet planet-1"></div>
+            <div class="planet planet-2"></div>
+        </div>
+        
+        <!-- Layer 3: Medium (Background Mountains / Structures) -->
+        <div class="parallax-layer layer-mountains-back" data-speed="0.3">
+            <div class="mountain m-back-1"></div>
+            <div class="mountain m-back-2"></div>
+            <div class="mountain m-back-3"></div>
+        </div>
+        
+        <!-- Layer 4: Fast (Foreground Mountains) -->
+        <div class="parallax-layer layer-mountains-front" data-speed="0.5">
+            <div class="mountain m-front-1"></div>
+            <div class="mountain m-front-2"></div>
+        </div>
+        
+        <!-- Layer 5: Hero Content (Text) -->
+        <div class="parallax-layer layer-content" data-speed="0.7">
+            <h1 class="hero-title">STELLAR<br>EXPLORER</h1>
+            <p class="hero-subtitle">Journey Beyond the Edge of Tomorrow</p>
+            <a href="#section-journey" class="btn-primary">Start Exploring</a>
+        </div>
+        
+        <!-- Layer 6: Fastest (Foreground Mist/Particles) -->
+        <div class="parallax-layer layer-foreground" data-speed="1.1"></div>
+    </section>
+
+    <!-- SECTION 1: JOURNEY BEGINS -->
+    <section class="content-section section-journey" id="section-journey">
+        <div class="container">
+            <h2 class="section-title reveal-up">The Journey Begins</h2>
+            <p class="section-subtitle reveal-up">Prepare for atmospheric exit and deep space traversal.</p>
+            
+            <div class="grid-cards">
+                <div class="glass-card reveal-up" style="--delay: 0s;">
+                    <div class="card-icon">🚀</div>
+                    <h3>Launch Protocol</h3>
+                    <p>Initiating sequence for deep space exploration. Propulsion systems nominal and ready for ignition.</p>
+                </div>
+                <div class="glass-card reveal-up" style="--delay: 0.15s;">
+                    <div class="card-icon">🌌</div>
+                    <h3>Nebula Nav</h3>
+                    <p>Charting courses through uncharted cosmic clouds, gathering telemetry data from distant star systems.</p>
+                </div>
+                <div class="glass-card reveal-up" style="--delay: 0.3s;">
+                    <div class="card-icon">🛸</div>
+                    <h3>First Contact</h3>
+                    <p>Scanning subspace frequencies for unknown biological or mechanical signatures in the void.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: TECHNOLOGY LAYER -->
+    <section class="content-section section-tech" id="section-tech">
+        <div class="container layout-split">
+            <div class="split-left reveal-left">
+                <h2 class="section-title">Core Technology</h2>
+                <p class="section-text">Powered by state-of-the-art quantum processors, our ship's systems monitor everything from atmospheric integrity to warp drive stabilization in real-time.</p>
+                <div class="tech-graphic">
+                    <div class="tech-circle outer"></div>
+                    <div class="tech-circle inner"></div>
+                    <div class="tech-core"></div>
+                </div>
+            </div>
+            <div class="split-right">
+                <div class="progress-container reveal-right" style="--delay: 0s;">
+                    <div class="progress-label"><span>Warp Drive Core</span><span class="pct">98%</span></div>
+                    <div class="progress-track"><div class="progress-fill" data-width="98%"></div></div>
+                </div>
+                <div class="progress-container reveal-right" style="--delay: 0.1s;">
+                    <div class="progress-label"><span>Shield Integrity</span><span class="pct">85%</span></div>
+                    <div class="progress-track"><div class="progress-fill" data-width="85%"></div></div>
+                </div>
+                <div class="progress-container reveal-right" style="--delay: 0.2s;">
+                    <div class="progress-label"><span>Life Support</span><span class="pct">100%</span></div>
+                    <div class="progress-track"><div class="progress-fill" data-width="100%"></div></div>
+                </div>
+                <div class="progress-container reveal-right" style="--delay: 0.3s;">
+                    <div class="progress-label"><span>Navigation Grid</span><span class="pct">72%</span></div>
+                    <div class="progress-track"><div class="progress-fill" data-width="72%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: EXPERIENCE ZONE -->
+    <section class="content-section section-experience" id="section-experience">
+        <div class="container">
+            <h2 class="section-title text-center reveal-up">Interactive Displays</h2>
+            <p class="section-subtitle text-center reveal-up">Hover over the artifacts below to interact with the magnetic confinement fields.</p>
+            
+            <div class="interactive-grid">
+                <div class="tilt-card reveal-up" style="--delay: 0s;">
+                    <div class="tilt-card-inner">
+                        <div class="hologram hologram-cube">
+                            <div class="face front"></div><div class="face back"></div>
+                            <div class="face right"></div><div class="face left"></div>
+                            <div class="face top"></div><div class="face bottom"></div>
+                        </div>
+                        <h3>Hyper-Cube</h3>
+                        <p>Dimensional storage array allowing spatial folding.</p>
+                    </div>
+                </div>
+                <div class="tilt-card reveal-up" style="--delay: 0.2s;">
+                    <div class="tilt-card-inner">
+                        <div class="hologram hologram-sphere"></div>
+                        <h3>Plasma Orb</h3>
+                        <p>Main energy distribution and containment sphere.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: TIMELINE -->
+    <section class="content-section section-timeline" id="section-timeline">
+        <div class="container">
+            <h2 class="section-title text-center reveal-up">Mission Log</h2>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">Year 2084</span>
+                        <h3>Project Inception</h3>
+                        <p>Initial designs for the Stellar Explorer are finalized by the Global Space Coalition. Core warp equations are solved.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">Year 2091</span>
+                        <h3>Maiden Voyage</h3>
+                        <p>The ship leaves Earth's orbit, heading towards the Alpha Centauri system for the first deep-space field test.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">Year 2095</span>
+                        <h3>The Discovery</h3>
+                        <p>Anomalous signals detected near an uncharted exoplanet, shifting the mission parameters towards investigation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: FINAL SHOWCASE -->
+    <section class="section-final" id="section-final">
+        <div class="final-bg-parallax" data-speed="0.2"></div>
+        <div class="final-content reveal-up">
+            <h2 class="huge-title">READY TO BOARD?</h2>
+            <p>Join the crew and carve your name in the stars. The universe awaits.</p>
+            <button class="btn-glow" id="btn-confetti">
+                <span class="btn-text">Initiate Warp Sequence</span>
+                <span class="btn-flare"></span>
+            </button>
+        </div>
+        <canvas id="confetti-canvas"></canvas>
+    </section>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
